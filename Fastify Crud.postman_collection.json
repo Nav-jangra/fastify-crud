@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "f941479d-15d8-419e-a49d-cb57e056ad8f",
+		"name": "Fastify Crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29515012"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"naveen.jangra@0813.com\",\n    \"password\": \"Naveen@12344\",\n    \"displayName\": \"Naveen Jangra\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"naveen.jangra@0813.com\",\n    \"password\" : \"Naveen@12344\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTc0MDc3MTU5NywiZXhwIjoxNzQwNzc1MTk3LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiJVUzFGWHlhbFV3TXRJOWMxUU85SHlJUG44WXUyIn0.Gk1FBbAUiCdEAcerriCsCrSZV0wtdk0SinmKhTDirS9kMNJwRcJFXZ-m8v30FEqM4Y-LmERxY2XrRiKr2_RbKF0O5p6o2r22OUyvhKB50usLHDYkhLCR1mp4J9dY6bV2PvjoK4LPKKGUC40dCNQxYkdTgJ4vq1MCwaodmufTSSZdALozV2Clz1urUay1DhGQV_TMMIoTACItn0_hE5wQD2b2NHcis6hsaDLzXhU5zeb4XiWGgS9Hnra1nC3sNsOdJo7mYaKIRoPe62u8kUpral3E9st_pZhiqViuDCQ4y_D-evK2OmwU9J9iAtFd9-ZjA73ZxHufVohcuPiMWBYygw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\n        \"name\" : \"Naveen Jangra\",\n        \"phone\" : \"123212345\",\n        \"email\" : \"abc@dfr.com\",\n        \"title\" : \"Mr\",\n        \"description\" : \"Naveen is a family man\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTc0MDc3MTU5NywiZXhwIjoxNzQwNzc1MTk3LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiJVUzFGWHlhbFV3TXRJOWMxUU85SHlJUG44WXUyIn0.Gk1FBbAUiCdEAcerriCsCrSZV0wtdk0SinmKhTDirS9kMNJwRcJFXZ-m8v30FEqM4Y-LmERxY2XrRiKr2_RbKF0O5p6o2r22OUyvhKB50usLHDYkhLCR1mp4J9dY6bV2PvjoK4LPKKGUC40dCNQxYkdTgJ4vq1MCwaodmufTSSZdALozV2Clz1urUay1DhGQV_TMMIoTACItn0_hE5wQD2b2NHcis6hsaDLzXhU5zeb4XiWGgS9Hnra1nC3sNsOdJo7mYaKIRoPe62u8kUpral3E9st_pZhiqViuDCQ4y_D-evK2OmwU9J9iAtFd9-ZjA73ZxHufVohcuPiMWBYygw"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/search",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTc0MDc3MTU5NywiZXhwIjoxNzQwNzc1MTk3LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiJVUzFGWHlhbFV3TXRJOWMxUU85SHlJUG44WXUyIn0.Gk1FBbAUiCdEAcerriCsCrSZV0wtdk0SinmKhTDirS9kMNJwRcJFXZ-m8v30FEqM4Y-LmERxY2XrRiKr2_RbKF0O5p6o2r22OUyvhKB50usLHDYkhLCR1mp4J9dY6bV2PvjoK4LPKKGUC40dCNQxYkdTgJ4vq1MCwaodmufTSSZdALozV2Clz1urUay1DhGQV_TMMIoTACItn0_hE5wQD2b2NHcis6hsaDLzXhU5zeb4XiWGgS9Hnra1nC3sNsOdJo7mYaKIRoPe62u8kUpral3E9st_pZhiqViuDCQ4y_D-evK2OmwU9J9iAtFd9-ZjA73ZxHufVohcuPiMWBYygw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"name\": \"Naveen Jangra\",\n        \"phone\": \"123212345\",\n        \"email\": \"abc@dfr.com\",\n        \"title\": \"Mr\",\n        \"description\": \"Naveen is a family man, He has 3 children\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "YKNL6NtVKW98bsrxKvRo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTc0MDc3MTU5NywiZXhwIjoxNzQwNzc1MTk3LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BmYXN0aWZ5LWNydWQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiJVUzFGWHlhbFV3TXRJOWMxUU85SHlJUG44WXUyIn0.Gk1FBbAUiCdEAcerriCsCrSZV0wtdk0SinmKhTDirS9kMNJwRcJFXZ-m8v30FEqM4Y-LmERxY2XrRiKr2_RbKF0O5p6o2r22OUyvhKB50usLHDYkhLCR1mp4J9dY6bV2PvjoK4LPKKGUC40dCNQxYkdTgJ4vq1MCwaodmufTSSZdALozV2Clz1urUay1DhGQV_TMMIoTACItn0_hE5wQD2b2NHcis6hsaDLzXhU5zeb4XiWGgS9Hnra1nC3sNsOdJo7mYaKIRoPe62u8kUpral3E9st_pZhiqViuDCQ4y_D-evK2OmwU9J9iAtFd9-ZjA73ZxHufVohcuPiMWBYygw"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "o5uWmQJy5GEfX3oiS7Ff"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
